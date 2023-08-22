@@ -83,9 +83,9 @@ app.use((req, res, next) => {
 
 //Handle API request
 const handleRequest = async (api) => {
-  const [meta, preloader, navigation, home, about, { results: collections }] =
+  const [preloader, navigation, home, about, { results: collections }] =
     await Promise.all([
-      api.getSingle('meta'),
+      // api.getSingle('meta'),
       api.getSingle('preloader'),
       api.getSingle('navigation'),
       api.getSingle('home'),
@@ -126,7 +126,7 @@ const handleRequest = async (api) => {
 
   return {
     assets,
-    meta,
+    // meta,
     home,
     collections,
     about,
