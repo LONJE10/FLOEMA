@@ -16,26 +16,33 @@ block content
                 if section.slice_type =='title'
                     h2.about_title=section.primary.text
                 
-                if section.slice_type='content'
+                if section.slice_type == 'content'
                     section.about_content 
                         .about_content_wrapper 
                             p.about_content_label=section.primary.label
 
-                        .about_content_description!=Prismic.asHTML(section.primary.description)
+                            .about_content_description!=Prismic.asHTML(section.primary.description)
 
-                            //- figure.about_content_media  
-                            //-     img.about_content_media_image(alt=section.primary.image.alt src=section.primary.url)
+                        figure.about_content_media  
+                            img.about_content_media_image(src=section.primary.image.url alt=section.primary.image.alt)
                 
-                //- if section.slice_type='highlight'
-                //-     section.about_highlight 
-                //-         .about_highlight_wrapper
-                //-             if section.primary.label 
-                //-                 p.about_highlight_label=section.primary.label 
+                if section.slice_type == 'highlight'
+                    section.about_highlight 
+                        .about_highlight_wrapper
+                            if section.primary.label 
+                                p.about_highlight_label=section.primary.label 
 
-                //-             h3.about_highlight_title=section.primary.title
+                            h3.about_highlight_title=section.primary.title
 
-                //-             each media in section.items 
-                //-                 figure.about_highlight_media  
-                //-                     img.about_highlight_media_image(alt=media.primary.image.alt src=media.primary.url)
+                                each media in section.items 
+                                    figure.about_highlight_media  
+                                        img.about_highlight_media_image(src=media.image.url)
+
+                if section.slice_type == 'gallery'
+                    section.about_gallery
+                        .about_gallery-wrapper
+                            each media in section.items
+                                figure.about_gallery_media
+                                    img.about_gallery_media_image(alt=media.image.alt src=media.image.url) 
 
                 
