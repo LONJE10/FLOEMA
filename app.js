@@ -96,8 +96,6 @@ const handleRequest = async (api) => {
       }),
     ])
 
-  console.log(about.data.body)
-
   const assets = []
 
   //   home.data.gallery.forEach((item) => {
@@ -166,7 +164,7 @@ app.get('/detail/:uid', async (req, res) => {
     fetchLinks: 'collection.title',
   })
 
-  // console.log(product);
+  console.log(product)
 
   res.render('pages/detail', {
     ...defaults,
