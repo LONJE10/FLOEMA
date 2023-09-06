@@ -6,9 +6,8 @@ nav.navigation
       svg.navigation_link_icon
 
     ul.navigation_list
-      li.navigation_list_item
-        a.navigation_list_link(href='/about') About
+      each item in navigation.data.list
+        li.navigation_list_item
+          a.navigation_list_link(href=Link(item.link))=item.text
 
-      li.navigation_list_item
-        a.navigation_list_link(href='/collections') Collections
 
