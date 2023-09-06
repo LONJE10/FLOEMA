@@ -1,7 +1,5 @@
 .preloader
-    p.preloader_text
-    | The suprise of what is possible
-    | To make with a simple
-    | and thin thread 
+    p.preloader__text!=preloader.data.title.replace(/\n/g,'<br>')
 
-    .preloader_number 0%
+    .preloader_number 
+    .preloader_number_text 0%
