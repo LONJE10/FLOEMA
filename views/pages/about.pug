@@ -5,44 +5,44 @@ block variables
 
 block content 
     .about
-        .about-wrapper
-            section.about_gallery
-                .about_gallery-wrapper
+        .about__wrapper
+            section.about__gallery
+                .about__gallery__wrapper
                     each media in about.data.gallery
-                        figure.about_gallery_media
-                            img.about_gallery_media_image(alt=media.image.alt src=media.image.url) 
+                        figure.about__gallery__media
+                            img.about__gallery__media__image(alt=media.image.alt src=media.image.url) 
 
             each section in about.data.body
                 if section.slice_type =='title'
-                    h2.about_title=section.primary.text
+                    h2.about__title=section.primary.text
                 
                 if section.slice_type == 'content'
-                    section.about_content 
-                        .about_content_wrapper 
-                            p.about_content_label=section.primary.label
+                    section.about__content 
+                        .about__content__wrapper 
+                            p.about__content__label=section.primary.label
 
-                            .about_content_description!=Prismic.asHTML(section.primary.description)
+                            .about__content__description!=Prismic.asHTML(section.primary.description)
 
-                        figure.about_content_media  
-                            img.about_content_media_image(src=section.primary.image.url alt=section.primary.image.alt)
+                        figure.about__content__media  
+                            img.about__content__media__image(src=section.primary.image.url alt=section.primary.image.alt)
                 
                 if section.slice_type == 'highlight'
-                    section.about_highlight 
-                        .about_highlight_wrapper
+                    section.about__highlight 
+                        .about__highlight__wrapper
                             if section.primary.label 
-                                p.about_highlight_label=section.primary.label 
+                                p.about__highlight__label=section.primary.label 
 
-                            h3.about_highlight_title=section.primary.title
+                            h3.about__highlight__title=section.primary.title
 
                                 each media in section.items 
-                                    figure.about_highlight_media  
-                                        img.about_highlight_media_image(src=media.image.url)
+                                    figure.about__highlight__media  
+                                        img.about__highlight__media__image(src=media.image.url)
 
                 if section.slice_type == 'gallery'
-                    section.about_gallery
-                        .about_gallery-wrapper
+                    section.about__gallery
+                        .about__gallery__wrapper
                             each media in section.items
-                                figure.about_gallery_media
-                                    img.about_gallery_media_image(alt=media.image.alt src=media.image.url) 
+                                figure.about__gallery__media
+                                    img.about__gallery__media__image(alt=media.image.alt src=media.image.url) 
 
                 

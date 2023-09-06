@@ -5,28 +5,28 @@ block variables
 
 block content 
     .detail 
-        .detail_wrapper
-           figure.detail_media 
-            img.detail_media_image(alt=product.data.image.alt src=product.data.image.url)
+        .detail__wrapper
+           figure.detail__media 
+            img.detail__media__image(alt=product.data.image.alt src=product.data.image.url)
 
-            .detail_information             
-               p.detail_information_collection=product.data.collection.data.title
+            .detail__information             
+               p.detail__information__collection=product.data.collection.data.title
 
-               h1.detail_information_title=product.data.title
+               h1.detail__information__title=product.data.title
 
-               .deatil_information_content 
-                    .detail_information_highlight
+               .deatil__information_content 
+                    .detail__information__highlight
                         each highlight in product.data.highlights
-                            p.detail_information_highlight 
-                                svg.detail_information_highlight_icon
+                            p.detail__information__highlight 
+                                svg.detail__information__highlight__icon
                                     use(xlink:href=highlight.highlights_icon)
 
-                                span.detail_information_highlight_text!=highlight.highlights_text
+                                span.detail__information__highlight__text!=highlight.highlights_text
 
-                    .detail_information_list
+                    .detail__information__list
                         each item in product.data.informations
-                            p.detail_information_item
-                                strong.detail_information_item_title=item.informations_label
-                                span.detail_information_item_description=item.informations_description
+                            p.detail__information__item
+                                strong.detail__information__item__title=item.informations_label
+                                span.detail__information__item__description=item.informations_description
 
-                    a.detail_information_link(href=product.data.link_url.url target='_blank')=product.data.link_text
+                    a.detail__information__link(href=product.data.link_url.url target='_blank')=product.data.link_text

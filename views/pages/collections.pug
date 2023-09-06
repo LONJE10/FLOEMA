@@ -5,22 +5,22 @@ block variables
 
 block content 
     .collections 
-        .collections_wrapper
-            .home_titles 
+        .collections__wrapper
+            .home__titles 
                 each collection in collections
-                    .home_titles_label!=`${home.data.collection}<br>${Numbers(index)}`
-                    .home_titles_title=collection.data.title
+                    .home__titles__label!=`${home.data.collection}<br>${Numbers(index)}`
+                    .home__titles__title=collection.data.title
 
-            .collections_gallery 
-                .collection_gallery_wrapper
+            .collections__gallery 
+                .collection__gallery__wrapper
                     each collection in collections
                         each product in collection.data.products
-                            a.collections_gallery_link(href=Link(product.products_product))
-                                figure.collections_gallery_media
-                                    img.collections_gallery_media_image(alt=product.products_product.data.image.alt src=product.products_product.data.image.url)
+                            a.collections__gallery__link(href=Link(product.products_product))
+                                figure.collections__gallery__media
+                                    img.collections__gallery__media__image(alt=product.products_product.data.image.alt src=product.products_product.data.image.url)
 
-        .collections_content
+        .collections__content
             each collection in collections
-                article.collections_article
-                    h2.collections_article_title=`${collection.data.title} ${home.data.collection}` 
-                    p.collections_article_Description=collection.data.description
+                article.collections__article
+                    h2.collections__article__title=`${collection.data.title} ${home.data.collection}` 
+                    p.collections__article__Description=collection.data.description
