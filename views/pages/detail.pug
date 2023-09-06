@@ -5,11 +5,11 @@ block variables
 
 block content 
     .detail 
-        .detail-wrapper
+        .detail_wrapper
            figure.detail_media 
             img.detail_media_image(alt=product.data.image.alt src=product.data.image.url)
 
-            .detail-information             
+            .detail_information             
                p.detail_information_collection=product.data.collection.data.title
 
                h1.detail_information_title=product.data.title
@@ -21,7 +21,7 @@ block content
                                 svg.detail_information_highlight_icon
                                     use(xlink:href=highlight.highlights_icon)
 
-                                span.detail__information__highlight__text!=highlight.highlights_text
+                                span.detail_information_highlight_text!=highlight.highlights_text
 
                     .detail_information_list
                         each item in product.data.informations
