@@ -30,6 +30,7 @@ const initApi = (req) => {
 
 //Link Resolver
 const handleLinkResolver = (doc) => {
+  console.log(doc)
   if (doc.type === 'product') {
     return `/detail/${doc.slug}`
   }
@@ -114,13 +115,13 @@ const handleRequest = async (api) => {
     }
   })
 
-  //   collections.forEach((collection) => {
-  //     collection.data.list.forEach((item) => {
-  //       assets.push(item.product.data.image.url);
-  //     });
-  //   });
+  // collections.forEach((collection) => {
+  //   collection.data.list.forEach((item) => {
+  //     assets.push(item.product.data.image.url)
+  //   })
+  // })
 
-  // console.log(collections);
+  // console.log(collections)
 
   return {
     assets,
