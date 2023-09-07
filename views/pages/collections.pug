@@ -6,13 +6,13 @@ block variables
 block content 
     .collections 
         .collections__wrapper
-            .home__titles 
+            .collections__titles 
                 each collection in collections
-                    .home__titles__label!=`${home.data.collection}<br>${Numbers(index)}`
-                    .home__titles__title=collection.data.title
+                    .collections__titles__label!=`${home.data.collection}<br>${Numbers(index)}`
+                    .collections__titles__title=collection.data.title
 
             .collections__gallery 
-                .collection__gallery__wrapper
+                .collections__gallery__wrapper
                     each collection in collections
                         each product in collection.data.products
                             a.collections__gallery__link(href=Link(product.products_product))
