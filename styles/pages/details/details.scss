@@ -1,17 +1,23 @@
 .detail{
-    
+    @extend %center;
+    @extend %cover;
 }
 
 .detail__wrapper{
-    
+    align-items: center;
+    display: flex;
 }
 
 .detail__media{
-    
+
+   height: 78.2rem;
+   position: relative;
+   width: 55.4rem;
 }
 
 .detail__media__image{
-    
+    // @extend %cover;
+    // object-fit: cover;
 }
 
 .detail__information{
@@ -23,19 +29,19 @@
 }
 
 .detail__information__title{
+
+}
+
+.detil__information_content{
     
 }
 
-.deatil__information_content{
+.detail__information__highlights{
     
 }
 
 .detail__information__highlight{
-    
-}
-
-.detail__information__highlight{
-    
+   
 }
 
 .detail__information__highlight__icon{
@@ -51,11 +57,11 @@
 }
 
 .detail__information__item{
-    
+
 }
 
 .detail__information__item__title{
-    
+
 }
 
 .detail__information__item__description{
@@ -63,6 +69,6 @@
 }
 
 .detail__information__link{
-    
+
 }
 

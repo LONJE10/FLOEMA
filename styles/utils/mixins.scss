@@ -1,15 +1,16 @@
 %cover {
     position: absolute;
-    top: 0;
     left: 0;
-    width: 100%;
+    top: 0;
     height: 100%;
+    width: 100%;
   }
   
   %center {
-    display: flex;
     align-items: center;
+    display: flex;
     justify-content: center;
+    text-align: center;
   }
   
   @mixin ratio($width, $height) {
