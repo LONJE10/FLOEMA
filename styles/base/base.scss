@@ -1,3 +1,9 @@
+*,
+*:after,
+*::before {
+    box-sizing: border-box;
+}
+
 html{
     font-size: calc(100vw / 1920 * 10)
 }
@@ -5,7 +11,16 @@ body{
     @extend %description-16;
     font-family: $font-suisse-bp;
 
-//     @include media('<=phone'){
-//         font-size: 100px;
-//     }
+    @include media('<=phone'){
+        font-size: 100px;
+    }
+}
+
+a {
+    color: inherit;
+    outline: none;
+    text-decoration: none;
+}
+img {
+    vertical-align: middle;
 }

@@ -1,5 +1,6 @@
 .about{
-    color: #2d2d2d
+    background: $color-cadet-blue;
+    color: $color-bright-grey;
 }
 
 .about__wrapper{
@@ -7,6 +8,10 @@
 }
 
 .about__title{
-    
+    @extend %title-100;
+
+    margin: auto;
+    max-width: 124rem;
+    text-align: center;
 }
 
